@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Sitem</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="sidebar">
+        <div id="sidebar-header">
+            <h2 id="sidebar-title">BLODWHITE</h2>
+        </div>
+        <div id="sidebar-content">
+            <div class="sidebar-item" onclick="showChannel('main')">Ana Menü</div>
+            <div class="sidebar-item" onclick="showChannel('chat')">Chat Kanalı</div>
+            <div class="sidebar-item" onclick="showChannel('anonymous')">Anonim Kanal</div>
+        </div>
+    </div>
+
+    <div id="main-content">
+        <div id="intro-screen">
+            <div class="snowfall"></div>
+            <h1>BLODWHITE</h1>
+        </div>
+
+        <div id="channels">
+            <div id="channel-main" class="channel">
+                <h2>Ana Menü - Programmer By: BLODWHITE</h2>
+                <p>Hoş geldin, <span id="username"></span></p>
+            </div>
+
+            <div id="channel-chat" class="channel">
+                <h2>Chat Kanalı</h2>
+                <div id="chat-box">
+                    <div id="chat-messages">
+                        <!-- Kullanıcı mesajları burada görünecek -->
+                    </div>
+                    <input type="text" id="chat-input" placeholder="Mesajınızı yazın..." onkeydown="sendMessage(event, 'chat')">
+                </div>
+            </div>
+
+            <div id="channel-anonymous" class="channel">
+                <h2>Anonim Kanal</h2>
+                <div id="anonymous-box">
+                    <div id="anonymous-messages">
+                        <!-- Anonim sohbet burada görünecek -->
+                    </div>
+                    <input type="text" id="anonymous-input" placeholder="Anonim mesajınızı yazın..." onkeydown="sendMessage(event, 'anonymous')">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
